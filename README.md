@@ -1,6 +1,6 @@
-# 🚗 Sistema Parking Express - MVC
+# Sistema Parking Express - MVC
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto implementa un **CRUD (Create, Read, Update, Delete)** para la gestión de vehículos, desarrollado con **Laravel** y orientado a buenas prácticas de desarrollo, trazabilidad de datos y documentación clara.
 
@@ -8,7 +8,7 @@ El sistema permite registrar, visualizar, editar y eliminar vehículos, aplicand
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 * **Laravel** (Framework backend)
 * **Laravel Herd** (Entorno de desarrollo)
@@ -18,7 +18,7 @@ El sistema permite registrar, visualizar, editar y eliminar vehículos, aplicand
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 El proyecto sigue la estructura estándar de Laravel, destacando:
 
@@ -30,26 +30,23 @@ El proyecto sigue la estructura estándar de Laravel, destacando:
 
 ---
 
-## 🗄️ Diseño de Base de Datos
+## Diseño de Base de Datos
 
-### 📋 Tabla: **vehiculos**
+### Tabla: **vehiculos**
 
 | Campo         | Tipo      | Obligatorio |
 | ------------- | --------- | ----------- |
 | id            | BIGINT    | Sí          |
 | placa         | VARCHAR   | Sí          |
 | tipo          | VARCHAR   | Sí          |
-| propietario   | VARCHAR   | Sí          |
+| propietario   | VARCHAR   | No          |
 | observaciones | TEXT      | No          |
 | created_at    | TIMESTAMP | Sí          |
-| updated_at    | TIMESTAMP | No          |
-| deleted_at    | TIMESTAMP | No          |
-
-La columna `deleted_at` permite aplicar la política de **Soft Delete**, evitando la eliminación física de los registros.
+| updated_at    | TIMESTAMP | Si          |
 
 ---
 
-## 🚙 Tipos de Vehículos
+## Tipos de Vehículos
 
 | Tipo de Vehículo | Descripción                                                                              |
 | ---------------- | ---------------------------------------------------------------------------------------- |
@@ -59,32 +56,32 @@ La columna `deleted_at` permite aplicar la política de **Soft Delete**, evitand
 
 ---
 
-## 🔎 Validaciones Implementadas
+## Validaciones Implementadas
 
 El sistema cuenta con validaciones básicas para garantizar la integridad de la información:
 
 - El campo **placa** es obligatorio y único.
 - El campo **tipo de vehículo** es obligatorio.
-- El campo **propietario** es obligatorio.
+- El campo **propietario** es opcional.
 - El campo **observaciones** es opcional.
 ---
 
-## 🧹 Política de Eliminación de Datos
+## Política de Eliminación de Datos
 
-✔ **Sí, se pueden eliminar registros**.
+**Sí, se pueden eliminar registros**.
 
-El sistema utiliza una **política de eliminación lógica (Soft Delete)**, lo que significa que:
+El sistema utiliza una **política de confirmación de elimincación**, lo que significa que:
 
-* Los registros no se eliminan físicamente de la base de datos.
-* Se marcan como eliminados mediante el campo `deleted_at`.
-* Se conserva el historial de información.
-* Se garantiza la trazabilidad y recuperación de datos si es necesario.
+* Se pueden eliminar registros con una confirmación obligatoria, es decir antes de eliminar, el sistema solicita confirmación explícita al usuario. Esto tiene sus ventajas como:
+-	Reducir errores por parte de las personas.
+-	Fácil de implementar
+Pero tiene una desventaja importante, siendo que no conserva el historial al ser una eliminación física, por lo tanto, una posible solución aplicado a sistemas más grandes es realizar un borrado lógico.
 
 Esta política es ideal para sistemas administrativos donde la información no debe perderse definitivamente.
 
 ---
 
-## 📱 Interfaz de Usuario
+## Interfaz de Usuario
 
 * Diseño **responsive** usando Bootstrap 5.
 * Compatible con dispositivos móviles y de escritorio.
@@ -92,9 +89,9 @@ Esta política es ideal para sistemas administrativos donde la información no d
 
 ---
 
-## 🔧 Instalación y Ejecución
+## Instalación y Ejecución
 
-### 📤 Subir cambios a GitHub
+### Subir cambios a GitHub
 
 Una vez finalizado el desarrollo del CRUD, se deben guardar y subir los cambios al repositorio público en GitHub.
 
@@ -112,11 +109,11 @@ Luego de ejecutar estos comandos, se puede verificar que el repositorio se encue
 
 ---
 
-## 🧠 Decisiones Técnicas
+## Decisiones Técnicas
 
 - Se utilizó **Laravel** como framework principal debido a su arquitectura MVC, facilidad de mantenimiento y soporte para buenas prácticas de desarrollo.
 - Se implementó **Bootstrap 5** para garantizar un diseño responsive y compatible con distintos dispositivos.
-- Se aplicó una política de **eliminación lógica (Soft Delete)** para preservar la trazabilidad y el historial de los datos.
+- Se aplicó una política de **eliminación por confirmación**, esto no asegura el historial de los datos, por lo tanto es recomendable realizar un borrador lógico.
 - La estructura del proyecto sigue la organización estándar de Laravel para facilitar su escalabilidad y comprensión.
 ---
 
@@ -155,8 +152,7 @@ capturas/
 Esta estructura sigue las buenas prácticas de Laravel, separando correctamente modelos, controladores, vistas, rutas y migraciones, lo que facilita el mantenimiento y la escalabilidad del proyecto.
 
 ---
-
-## 🧹 Política de Eliminación de Datos
+## Uso de GitHub
 
 1. Clonar el repositorio:
 
@@ -176,7 +172,7 @@ php artisan serve
 
 ---
 
-## 📌 Consideraciones Finales
+## Consideraciones Finales
 
 Este proyecto fue desarrollado con un enfoque académico y práctico, priorizando:
 
@@ -187,16 +183,16 @@ Este proyecto fue desarrollado con un enfoque académico y práctico, priorizand
 
 ---
 
-## 🖼️ Evidencias del Sistema
+## Evidencias del Sistema
 
 A continuación, se presentan evidencias visuales del correcto funcionamiento del sistema **Parking Express – MVC**, demostrando el cumplimiento de los requisitos funcionales y técnicos del CRUD.
 
 ---
 
-### 📋 Listado de Vehículos
-Visualización general de los vehículos registrados en el sistema.
+### Listado de Vehículos
+Menú principal del sistema donde se visualiza todos los registros de vehículos
 
-![Listado de vehículos](capturas/VehiculosCreados.png)
+![Menú principal del sistema](capturas/Menú principal del sistema.png)
 
 ---
 
