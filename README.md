@@ -192,66 +192,67 @@ A continuación, se presentan evidencias visuales del correcto funcionamiento de
 ### Listado de Vehículos
 Menú principal del sistema donde se visualiza todos los registros de vehículos
 
-![Menú principal del sistema](capturas/Menú principal del sistema.png)
+![Menú principal del sistema](capturas/menuPrincipal.png)
 
 ---
 
-### 📝 Registro de Vehículos
+### Registro de Vehículos
 Formulario para el ingreso de nuevos vehículos con validaciones aplicadas.
 
-![Registro de vehículos](capturas/RegistroVehiculos.png)
+![Ventana de edición de vehículo](capturas/ventanaRegistro.png)
 
 ---
 
-### ✏️ Edición de Vehículos
+### Edición de Vehículos
 Pantalla de edición para la actualización de información de un vehículo existente.
 
-![Edición de vehículos](capturas/EditarVehiculo.png)
+![Edición de vehículos](capturas/VentanaEdicion.png)
 
 ---
 
-### ⏱️ Registro Automático de Fecha y Hora
-Evidencia del registro automático de fecha y hora al crear un vehículo.
+### Política de Eliminación
+Demostración de la política de eliminación por confirmación aplicada a los registros del sistema.
 
-![Fecha y hora automática](capturas/FechaHora.png)
+![Mensaje de confirmación explícita antes del borrado](capturas/mensajeConfirmacionAntesBorrado.png)
 
----
+### Pop up de elimincación exitosa
 
-### 🧹 Política de Eliminación Lógica (Soft Delete)
-Demostración de la política de eliminación lógica aplicada a los registros del sistema.
+Mensaje de información por la eliminación por confirmación aplicada.
 
-![Soft Delete](capturas/PoliticaEliminacion.png)
-
----
-
-### 🗃️ Registros Eliminados en Base de Datos
-Visualización de los registros eliminados lógicamente almacenados en la base de datos.
-
-![Registros eliminados en BDD](capturas/VehiculosEliminadosBDD.png)
+![Eliminación exitosa](capturas/eliminacionExitosa.png)
 
 ---
 
-### 📱 Vista Móvil (Responsive)
+### Registros Eliminados en Base de Datos
+Visualización de los registros eliminados tanto física como lógicamente en la base de datos.
+
+![Validación en la base de datos](capturas/validacionBD.png)
+
+---
+
+### Vista Móvil (Responsive)
 Adaptación del sistema a dispositivos móviles utilizando Bootstrap 5.
 
-![Vista móvil](capturas/InterfazMovil.png)
+![Vista móvil](capturas/vistaMovil.png)
+
+---
+
+### Uso de Laravel Herd
+Vista del proyecti dentro de laravel Herd.
+
+![Laravel HERD para uso web](capturas/laravelHERD.png)
 
 ---
 
 Las capturas se encuentran almacenadas en la carpeta `/screenshots` del repositorio.
 --
 
-## 👨‍💻 Autor
+## Autor
 
 <p align="center">
-  <strong>Steven Ariel Rosero</strong><br>
-  <em>Haciendo que el sistema funcione, a base de fe y café ☕</em><br>
+  <strong>Luis Alobuela</strong><br>
   Estudiante de Ingeniería en Sistemas<br>
   Pontificia Universidad Católica del Ecuador
-</p>
-
-<p align="center">
-  <img src="assets/puce.png" alt="PUCE" width="120">
 </p>
 
 
